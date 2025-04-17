@@ -23,7 +23,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BD27DBA82DB107640067F7BD /* TapTheCube */ = {
+		BD27DBB52DB107820067F7BD /* TapTheCube */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TapTheCube;
 			sourceTree = "<group>";
@@ -44,7 +44,7 @@
 		BD27DB9D2DB107640067F7BD = {
 			isa = PBXGroup;
 			children = (
-				BD27DBA82DB107640067F7BD /* TapTheCube */,
+				BD27DBB52DB107820067F7BD /* TapTheCube */,
 				BD27DBA72DB107640067F7BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BD27DBA82DB107640067F7BD /* TapTheCube */,
+				BD27DBB52DB107820067F7BD /* TapTheCube */,
 			);
 			name = TapTheCube;
 			packageProductDependencies = (
