@@ -7,5 +7,6 @@
 
 import Foundation
 
-print("Hello, World!")
+var screnMan = ScreenManager()
 
+screnMan.showMenu()
