@@ -7,6 +7,16 @@
 
 import Foundation
 
-var screnMan = ScreenManager()
+let screenManager = ScreenManager()
+var lastTime = getCurrentTime()
 
-screnMan.showMenu()
+while !Window.shared.shouldClose() {
+    let now = getCurrentTime()
+    let delta = Float(now - lastTime)
+    lastTime = now
+    
+    Window.shared.pollEvents()
+    screenManager.update(deltaTime: delta)
+    screenManager.render()
+    Window.shared.presentFrame()
+}

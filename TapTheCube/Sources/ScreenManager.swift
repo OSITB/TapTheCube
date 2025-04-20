@@ -8,9 +8,37 @@
 import Foundation
 
 class ScreenManager {
-    var state: GameState = .menu
+    private var current: Screen!
     
-    func showMenu() { state = .menu; print("-> Menu")}
-    func startGame() { state = .playing; print("-> Playing")}
-    func endGame() { state = .results; print("-> Results")}
+    init() {
+        // по умолчанию - меню
+        self.current = MenuScreen(manager: self)
+        self.current.enter()
+    }
+    
+    func showMenu() {
+        current.exit()
+        current = MenuScreen(manager: self)
+        current.enter()
+    }
+    func startGame() {
+        current.exit()
+        current = GameScreen(manager: self)
+        current.enter()
+        }
+    func endGame(withScore score: Int) {
+        current.exit()
+        current = ResultScreen(manager: self, score: score)
+        current.enter()
+    }
+    
+    // Обновление кадра
+    func update(deltaTime: Float) {
+        current.update(deltaTime: deltaTime)
+    }
+    
+    func render() {
+        current.render()
+    }
+    
 }
